@@ -15,12 +15,12 @@ Application is deployed  to Heroku and is accessible by following links:
 
 Input sample: 
 
-{"features": 
+ {"features": 
 
-[{"Area": 32, "Room": 1, "Year": 2020, "Flat_floor": 1, "Total_floor": 4, "City": "Vilnius"}, 
-{"Area": 32, "Room": 1, "Year": 2020, "Flat_floor": 1, "Total_floor": 4, "City": "Kaunas"}, 
-{"Area": 32, "Room": 1, "Year": 2020, "Flat_floor": 1, "Total_floor": 4, "City": "Klaipeda"}]}
+ [{"Area": 32, "Room": 1, "Year": 2020, "Flat_floor": 1, "Total_floor": 4, "City": "Vilnius"}, 
+ {"Area": 32, "Room": 1, "Year": 2020, "Flat_floor": 1, "Total_floor": 4, "City": "Kaunas"}, 
+ {"Area": 32, "Room": 1, "Year": 2020, "Flat_floor": 1, "Total_floor": 4, "City": "Klaipeda"}]}
 
 Output:
 
-{"predicted_price": [110086.77605950236, 54602.422311458955, 49125.371590929775]}
+ {"predicted_price": [110086.77605950236, 54602.422311458955, 49125.371590929775]}
