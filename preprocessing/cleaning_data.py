@@ -139,8 +139,8 @@ def replace_text_all(final: pd.DataFrame):
 
 
 def make_intermediate(
-        load_data_filename: str = "C:/xampp/htdocs/phyton/project24/data/scraped_information.csv",
-        output: str = "C:/xampp/htdocs/phyton/project24/data/cleaned_data.csv",
+        load_data_filename: str = "data/scraped_information.csv",
+        output: str = "data/cleaned_data.csv",
 ) -> pd.DataFrame:
     data = load_data(load_data_filename)
     data = drop_missing_values(data)
