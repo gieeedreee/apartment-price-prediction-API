@@ -1,6 +1,6 @@
 # apartment-price-prediction-API
 # Introduction
-
+I part - https://github.com/gieeedreee/Domoplius_Scraper.
 This is the second part of project where collected data (scraped from website www.domoplius.lt) is trained, tested, linear regression model is saved and created an API using Flask.
 Model predicts apartment price in Lithuania. Flask application is connected to the PostgreSQL database hosted by Heroku and the model's inputs and outputs are inserted into one table.
 Application is deployed  to Heroku and is accessible by following links:
