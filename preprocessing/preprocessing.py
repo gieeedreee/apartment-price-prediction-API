@@ -4,11 +4,13 @@ import numpy as np
 import pandas as pd
 
 
-with open("model/encoder.pkl", "rb") as f:
-    encoder = pickle.load(f)
 
-with open("model/scaler.pkl", "rb") as s:
-    scaler = pickle.load(s)
+class Preprocessor:
+    def __init__(self):
+        with open("model/encoder.pkl", "rb") as f:
+            self.encoder = pickle.load(f)
+        with open("model/scaler.pkl", "rb") as s:
+            self.scaler = pickle.load(s)
 
 
 def process_input(request_data: str) -> np.array:
