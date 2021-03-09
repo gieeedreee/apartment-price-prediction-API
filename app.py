@@ -2,9 +2,10 @@ import pickle
 import json
 from flask import Flask
 from flask import request
-
 from database import database
-from preprocessing import process_input
+from preprocessing import Preprocessor
+
+preprocessor = Preprocessor()
 
 app = Flask(__name__)
 
@@ -24,7 +25,7 @@ def predict() -> (str, int):
     database hosted by Heroku.
     :return: list of predicted prices
     """
-    input_params, input_df = process_input(request.data)
+    input_params, input_df = preprocessor.process_input(request.data)
     try:
         prediction = clf.predict(input_params)
         database.insert_into_table(input_df, prediction)
