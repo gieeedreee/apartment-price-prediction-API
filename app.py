@@ -25,14 +25,17 @@ def predict() -> (str, int):
     database hosted by Heroku.
     :return: list of predicted prices
     """
-    input_params, input_df = preprocessor.process_input(request.data)
+    try:
+        input_params, input_df = preprocessor.process_input(request.data)
+    except ValueError:
+        return json.dumps({"error": "problems with input parameters"}), 400
     try:
         prediction = clf.predict(input_params)
         database.insert_into_table(input_df, prediction)
-        return json.dumps({"predicted_price": prediction.tolist()})
-
     except ValueError:
         return json.dumps({"error": "PREDICTION FAILED"}), 400
+
+    return json.dumps({"predicted_price": prediction.tolist()})
 
 
 @app.route("/select", methods=["GET"])
